@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < 256; i++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        gridContainer.appendChild(cell);
+
+        cell.addEventListener("mouseover", function() {
+            cell.classList.add("cell-colored");
+        });
+
+                gridContainer.appendChild(cell);
+
     }
 });
