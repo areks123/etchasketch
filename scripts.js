@@ -1,3 +1,10 @@
+function getRandomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const gridContainer = document.getElementById("gridContainer");
     const resizeButton = document.getElementById("resizeGrid")
@@ -15,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cell.style.height = `${gridSize / squaresPerSide}px`;
 
             cell.addEventListener("mouseover", function () {
-                cell.classList.add("cell-colored");
+                cell.style.backgroundColor = getRandomRGB();
             });
 
             gridContainer.appendChild(cell);
