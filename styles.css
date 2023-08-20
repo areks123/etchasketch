@@ -1,25 +1,31 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
+    padding: 40px;
 }
 
 .grid {
+    width: 80%;
+    max-width: 500;
+    margin: 40px auto;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-gap: 4px;
-    width: 320px;
-    height: 320px;
+    grid-gap: 2px;
 }
 
 .cell {
-    width: 20px;
-    height: 20px;
-    background-color: #333;
+    background-color: #eee;
+    border: 1px solid #ccc;
 }
 
 .cell-colored {
     background-color: #ff4500;
+}
+
+#resizeGrid {
+    display: block;
+    margin: 20px auto;
 }
